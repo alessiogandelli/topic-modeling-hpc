@@ -5,3 +5,10 @@ From: /apps/containers/Conda/miniconda-latest.sif
     conda install -y pandas
     conda install -y -c conda-forge hdbscan
     pip  install  tweets-to-topic-network
+
+%environment
+    export OPENAI_API_KEY = sk-xxx
+
+
+%labels
+    Author Alessio Gandelli
