@@ -1,9 +1,8 @@
 import pandas as pd
 from tweets_to_topic_network.topic import Topic_modeler
+import sys
 
-
-
-file_tweets = '/Users/alessiogandelli/data/cop23/cache/data/tweets_cop23.pkl'      
+file_tweets = sys.argv[1]    
 
 df = pd.read_pickle(file_tweets)
 
