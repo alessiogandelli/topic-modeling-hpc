@@ -2,8 +2,9 @@ Bootstrap: localimage
 From: /apps/containers/Conda/miniconda-latest.sif
 
 %post
-    conda install -y pandas
     conda install -y -c conda-forge hdbscan
+    pip install pandas==2.1.0
+    pip install protobuf==4.21.0
     pip install torch torchvision torchaudio --extra-index-url https://download.pytorch.org/whl/cu116
     pip install cuml-cu11 --extra-index-url=https://pypi.nvidia.com
     pip install  tweets-to-topic-network

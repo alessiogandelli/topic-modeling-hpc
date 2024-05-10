@@ -1,6 +1,6 @@
 #!/bin/sh
 
-#SBATCH --gpus-per-node=T4:1
+#SBATCH --gpus-per-node=V100:1
 #SBATCH -t 01:00:00
 
 
