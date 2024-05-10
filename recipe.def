@@ -4,7 +4,9 @@ From: /apps/containers/Conda/miniconda-latest.sif
 %post
     conda install -y pandas
     conda install -y -c conda-forge hdbscan
-    pip  install  tweets-to-topic-network
+    pip install torch torchvision torchaudio --extra-index-url https://download.pytorch.org/whl/cu116
+    pip install cuml-cu11 --extra-index-url=https://pypi.nvidia.com
+    pip install  tweets-to-topic-network
 
 %environment
     export OPENAI_API_KEY = sk-xxx
