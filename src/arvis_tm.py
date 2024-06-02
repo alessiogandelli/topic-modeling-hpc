@@ -18,26 +18,29 @@ path_cache = os.path.join(folder_path, 'cache')
 
 print(path_cache)
 
+
+df_en = df[df['lang'] == 'en']
+df_es = df[df['lang'] == 'es']
+df_fr = df[df['lang'] == 'fr']
+df_de = df[df['lang'] == 'de']
+
+print('English:', df_en.shape)
+
+
 # %%
 
-tm = Topic_modeler(df, name = 'cop_merged', embedder_name='all-MiniLM-L6-v2', path_cache = path_cache)
+tm = Topic_modeler(df_en, name = 'cop_merged_en', embedder_name='all-MiniLM-L6-v2', path_cache = path_cache)
 df_labeled = tm.get_topics()
 
 # %%
-tm = Topic_modeler(df, name = 'cop_merged', embedder_name='paraphrase-MiniLM-L3-v2', path_cache = path_cache)
+tm = Topic_modeler(df_en, name = 'cop_merged_en', embedder_name='paraphrase-MiniLM-L3-v2', path_cache = path_cache)
 df_labeled = tm.get_topics()
+
+
+
 
 # %%
 
 # tm = Topic_modeler(df, name = 'cop_merged', embedder_name='text-embedding-3-small', path_cache = path_cache)
 # df_labeled = tm.get_topics()
 
-
-# %%
-# tm.docs is a list of strings get the lenght of each 
-
-len_docs = [len(doc) for doc in tm.docs]
-# %%
-
-
-# %%

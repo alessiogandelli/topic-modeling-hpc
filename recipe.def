@@ -9,7 +9,7 @@ From: /apps/containers/Conda/miniconda-latest.sif
     pip install protobuf==4.21.0 
     pip install torch torchvision torchaudio --extra-index-url https://download.pytorch.org/whl/cu116
     pip install cuml-cu11 --extra-index-url=https://pypi.nvidia.com
-
+    module load GCC/11.2.0
 
 %environment
     export OPENAI_API_KEY = sk-xxx
