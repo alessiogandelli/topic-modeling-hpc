@@ -1,8 +1,11 @@
 ml purge  # Ensure we don't have any conflicting modules loaded
 
+# this fixes the issue with the libstdc++ version
+export LD_LIBRARY_PATH=/apps/Arch/software/Python/3.11.5-GCCcore-13.2.0/lib:$LD_LIBRARY_PATH
+
 # Load all your needed modules
-ml TensorFlow/2.11.0-foss-2022a-CUDA-11.7.0 PyTorch/1.11.0-foss-2022a-CUDA-11.7.0 matplotlib/3.5.2-foss-2022a
-ml JupyterLab/3.5.0-GCCcore-11.3.0 
+ml SciPy-bundle/2023.07-gfbf-2023a
+ml JupyterLab/4.0.5-GCCcore-12.3.0
 
 # Activate your virtual environment if needed
 # source path/to/your/venv/bin/activate

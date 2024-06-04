@@ -41,6 +41,6 @@ df_labeled = tm.get_topics()
 
 # %%
 
-# tm = Topic_modeler(df, name = 'cop_merged', embedder_name='text-embedding-3-small', path_cache = path_cache)
-# df_labeled = tm.get_topics()
+tm = Topic_modeler(df, name = 'cop_merged', embedder_name='text-embedding-3-large', path_cache = path_cache)
+df_labeled = tm.get_topics()
 
